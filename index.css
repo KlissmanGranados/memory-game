@@ -1,0 +1,53 @@
+body {
+    background: url(https://storage.googleapis.com/portfolio-50b24.appspot.com/backgrounds/cb1c95dffd9c7061e71be2382fdd345c1653814347583.jpeg);
+}
+
+.header__h3 {
+    font-size: 4rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.header__ul {
+    list-style: none;
+    margin: 1rem;
+}
+
+.header__span {
+    font-size: 2rem;
+}
+
+.header__span:first-child {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.header__span:last-child {
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.figure {
+    margin: .5rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+.figure__img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.active {
+    outline: solid red .5rem;
+}
