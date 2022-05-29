@@ -25,6 +25,7 @@
         data = await fetch("https://anime-ws.herokuapp.com/api/v1/animes/query/by");
         data = await data.json();
         data = data.data.map(images => images.image);
+        document.querySelector('.lds-dual-ring').remove();
     } catch (e) {
         console.error(e);
     }
@@ -36,7 +37,7 @@
 
     const imageFront = './assets/1.jpeg';
 
-    const images = data.slice(0, 5).concat(data.slice(0, 5));
+    const images = data.slice(0, 9).concat(data.slice(0, 9));
 
     function randomImages(image, index) {
         const lastIndex = Math.round(Math.random() * (images.length - 1));
@@ -143,7 +144,7 @@
 
     function boot() {
         const score = document.querySelector('.header__span:last-child');
-        score.textContent = 40;
+        score.textContent = 100;
         clear();
         loadImages();
         loadEvents();
