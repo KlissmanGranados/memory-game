@@ -37,7 +37,7 @@
 
     const imageFront = './assets/1.jpeg';
 
-    const images = data.slice(0, 9).concat(data.slice(0, 9));
+    const images = data.slice(0, 5).concat(data.slice(0, 5));
 
     function randomImages(image, index) {
         const lastIndex = Math.round(Math.random() * (images.length - 1));
