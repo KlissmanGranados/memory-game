@@ -37,7 +37,13 @@
 
     const imageFront = './assets/1.jpeg';
 
-    const images = data.slice(0, 5).concat(data.slice(0, 5));
+    const index = Math.round(Math.random() * data.length - 1);
+    const interval = 5;
+
+    let start = 0;
+    let end = interval;
+
+    let images;
 
     function randomImages(image, index) {
         const lastIndex = Math.round(Math.random() * (images.length - 1));
@@ -50,6 +56,13 @@
     }
 
     function loadImages() {
+        if (index > interval) {
+            start = index - interval;
+            end = index;
+        }
+
+        images = data.slice(start, end).concat(data.slice(start, end));
+
         images.forEach(randomImages);
         images.forEach((image) => {
             addImages([imageFront, image]);
